@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>霍雨薇 | 个人作品集</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
+            scroll-behavior: smooth;
+        }
+        body {
+            background-color: #f5f5f3;
+            color: #333;
+            line-height: 1.6;
+            padding-top: 60px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /*导航栏*/
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #2c3440;
+            z-index: 999;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+        }
+        .nav-wrap {
+            max-width: 1000px;
+            margin:0 auto;
+            padding:0 20px;
+            display:flex;
+            justify-content: space-between;
+            align-items:center;
+            height:60px;
+        }
+        .nav-logo{
+            color:#ffffff;
+            font-size:1.2rem;
+            font-weight:bold;
+        }
+        .nav-links{
+            display:flex;
+            gap:28px;
+        }
+        .nav-links a{
+            color:#d0d5d9;
+            text-decoration:none;
+            font-size:0.95rem;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover{
+            color:#ffffff;
+        }
+        /*头部*/
+        header {
+            padding: 60px 0;
+            border-bottom: 1px solid #d9d9d6;
+        }
+        .header-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap:30px;
+        }
+        .info h1 {
+            font-size: 2.2rem;
+            color:#2c3440;
+            margin-bottom:8px;
+        }
+        .info p {
+            color:#555;
+            font-size:1.05rem;
+        }
+        /*通用板块*/
+        section {
+            padding: 50px 0;
+            border-bottom:1px solid #d9d9d6;
+        }
+        section h2 {
+            font-size:1.5rem;
+            color:#2c3440;
+            margin-bottom:24px;
+            border-left:4px solid #7c8b99;
+            padding-left:12px;
+        }
+        .intro-text {
+            font-size:1rem;
+            color:#444;
+        }
+        /*项目卡片*/
+        .project-list {
+            display:grid;
+            grid-template-columns: repeat(auto-fit, minmax(420px,1fr));
+            gap:24px;
+        }
+        .project-card {
+            background:#fff;
+            padding:24px;
+            border-radius:10px;
+            box-shadow:0 2px 8px #00000008;
+            transition: transform 0.25s ease;
+        }
+        .project-card:hover{
+            transform: translateY(-4px);
+        }
+        .project-card h3 {
+            color:#384554;
+            margin-bottom:10px;
+        }
+        .project-data {
+            color:#826f5e;
+            font-weight:500;
+            margin:8px 0;
+        }
+        .project-result{
+            background-color:#f3f3f1;
+            padding:8px 12px;
+            border-radius:6px;
+            margin:12px 0;
+            color:#444;
+        }
+        .project-card p {
+            color:#4a4a4a;
+            font-size:0.96rem;
+        }
+        /*技能标签*/
+        .tag-wrap {
+            display:flex;
+            flex-wrap:wrap;
+            gap:12px;
+        }
+        .tag {
+            background:#e8ebeb;
+            color:#3a4856;
+            padding:8px 16px;
+            border-radius:20px;
+            font-size:0.92rem;
+        }
+        /*联系区域*/
+        .contact p{
+            font-size:1rem;
+            margin:10px 0;
+            color:#444;
+        }
+        .download-btn{
+            display:inline-block;
+            margin-top:16px;
+            padding:10px 24px;
+            background-color:#2c3440;
+            color:#fff;
+            text-decoration:none;
+            border-radius:6px;
+            transition: background-color 0.3s;
+        }
+        .download-btn:hover{
+            background-color:#414e5e;
+        }
+        footer{
+            text-align:center;
+            padding:30px;
+            color:#777;
+            font-size:0.9rem;
+        }
+        /*移动端适配*/
+        @media (max-width:768px){
+            .nav-wrap{
+                flex-direction:column;
+                height:auto;
+                padding:12px 20px;
+            }
+            body{
+                padding-top:90px;
+            }
+            .nav-links{
+                gap:14px;
+                flex-wrap:wrap;
+                justify-content:center;
+                margin-top:8px;
+            }
+            .header-wrap{
+                flex-direction:column;
+                text-align:center;
+            }
+            .project-list{
+                grid-template-columns: 1fr;
+            }
+            .info h1{
+                font-size:1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!--导航栏-->
+    <nav>
+        <div class="nav-wrap">
+            <div class="nav-logo">霍雨薇｜作品集</div>
+            <div class="nav-links">
+                <a href="#intro">个人简介</a>
+                <a href="#project">核心项目</a>
+                <a href="#skill">技能标签</a>
+                <a href="#contact">联系方式</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!--头部个人信息-->
+        <header>
+            <div class="header-wrap">
+                <div class="info">
+                    <h1>霍雨薇</h1>
+                    <p>求职方向：网络工程专业 | 网络工程本科在读</p>
+                </div>
+            </div>
+        </header>
+
+        <!--个人简介-->
+        <section id="intro">
+            <h2>个人简介</h2>
+            <p class="intro-text">
+                沈阳化工大学网络工程本科在读，2027届应届生。熟悉Windows、Linux基础操作，掌握TCP/IP网络原理、MySQL基础。拥有物联网项目网络联调、故障排查、运维台账编写经验，擅长文档归档、问题闭环跟进。做事踏实细致，学习能力强，可按照运维规范完成系统巡检、故障响应与数据记录工作。
+            </p>
+        </section>
+
+        <!--核心项目作品 带成果数据-->
+        <section id="project">
+            <h2>核心项目 / 作品</h2>
+            <div class="project-list">
+                <!--项目1-->
+                <div class="project-card">
+                    <h3>家居环境感知与智能响应平台</h3>
+                    <div class="project-data">项目时间：2025.10 - 2026.01 | 岗位：网络通信&系统调试</div>
+                    <div class="project-result">📊成果数据：排查通信故障；断线自动重连控制在5s内；完成全套运维台账文档</div>
+                    <p>搭建Socket长连接通信链路，完成串口转TCP数据流处理，定位串口乱码、TCP连接中断等通信故障；整理故障台账与运维文档，协同4人小组完成多模块联调，跟进问题闭环。</p>
+                </div>
+                <!--项目2-->
+                <div class="project-card">
+                    <h3>民宿管理系统（JSP+MySQL）</h3>
+                    <div class="project-data">课程实训项目 | 负责后端部署与基础运维</div>
+                    <div class="project-result">📊成果数据：完成数据库搭建，修复8+接口BUG；完成登录、订单等核心业务模块验证</div>
+                    <p>完成系统环境部署、数据库建库与基础维护；调试页面接口异常，记录BUG修复文档；验证用户登录、订单管理等功能，熟悉Web服务基础运维流程。</p>
+                </div>
+                <!--项目3-->
+                <div class="project-card">
+                    <h3>业务文档台账管理项目</h3>
+                    <div class="project-data">实习项目 | 文档与数据管理</div>
+                    <div class="project-result">📊成果数据：归档业务文档20+份，搭建标准化台账，提升资料检索追溯效率</div>
+                    <p>整理归档业务文档，搭建信息台账，规范资料留存；统计业务数据，输出月度数据小结，锻炼运维文档编写能力。</p>
+                </div>
+                <!--项目4-->
+                <div class="project-card">
+                    <h3>校园学生信息管理台账</h3>
+                    <div class="project-data">校园实践项目 | 信息运维管理</div>
+                    <div class="project-result">📊成果数据：完成百名学生信息收集归档，建立可查询信息台账，实现事务问题闭环处理</div>
+                    <p>完成学生信息收集、归档，搭建可查询信息台账；对接多方处理咨询反馈，形成问题响应闭环流程，熟悉数据维护与信息管理。</p>
+                </div>
+            </div>
+        </section>
+
+        <!--技能标签-->
+        <section id="skill">
+            <h2>技能标签</h2>
+            <div class="tag-wrap">
+                <span class="tag">Linux基础命令</span>
+                <span class="tag">Windows运维</span>
+                <span class="tag">TCP/IP网络</span>
+                <span class="tag">MySQL数据库</span>
+                <span class="tag">Socket通信</span>
+                <span class="tag">故障排查</span>
+                <span class="tag">运维文档编写</span>
+                <span class="tag">Excel台账</span>
+                <span class="tag">JSP</span>
+                <span class="tag">Vue基础</span>
+            </div>
+        </section>
+
+        <!--联系方式-->
+        <section id="contact" class="contact">
+            <h2>联系方式</h2>
+            <p>📞 电话：18713994949</p>
+            <p>📧 邮箱：1570758332@qq.com</p>
+            <a href="霍雨薇简历1(1).pdf" class="download-btn" download>📥 下载个人简历PDF</a>
+        </section>
+    </div>
+    <footer>
+        © 2026 霍雨薇 · 个人作品集
+    </footer>
+</body>
+</html>
